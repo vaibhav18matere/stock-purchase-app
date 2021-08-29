@@ -20,18 +20,18 @@ calculateProfitAndLoss = (initial, quantity, current) => {
         var profit = (current - initial) * quantity;
         var profitPercentage = (profit / initial) * 100;
         showOutput(`The profit is ${profit} and profit percentage is ${profitPercentage.toFixed(2)}% 💰🤩`);
-        outputBox.style.color = 'green';
+        outputBox.style.backgroundColor = 'green';
 
     } else if (initial > current) {
         //loss logic
         var loss = (initial - current) * quantity;
         var lossPercentage = (loss / initial) * 100;
         showOutput(`The loss is ${loss} and the loss percentage is ${lossPercentage.toFixed(2)}% 😌`);
-        outputBox.style.color = 'red';
+        outputBox.style.backgroundColor = 'red';
 
     } else {
         showOutput("No pain, No gain..& No gain so No pain");
-        outputBox.style.color = 'black';
+        outputBox.style.backgroundColor = 'white';
     }
 }
 
