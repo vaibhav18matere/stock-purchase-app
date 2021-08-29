@@ -1,27 +1,40 @@
-console.log("Let's Start !");
-
 const initialPrice = document.querySelector("#initial-price");
-const stockQuantity = document.querySelector("#stock-quantity");
+const stocksQuantity = document.querySelector("#stock-quantity");
 const currentPrice = document.querySelector("#current-price");
 const submitButton = document.querySelector("#submit-btn");
 const outputBox = document.querySelector("#output-box");
+
+submitHandler = () => {
+    var iPrice = Number(initialPrice.value);
+    var qty = Number(stocksQuantity.value);
+    var cPrice = Number(currentPrice.value);
+
+    calculateProfitAndLoss(iPrice, qty, cPrice);
+}
+
+submitButton.addEventListener("click", submitHandler);
 
 calculateProfitAndLoss = (initial, quantity, current) => {
     if (initial < current) {
         //profit logic
         var profit = (current - initial) * quantity;
         var profitPercentage = (profit / initial) * 100;
-        console.log(`The profit is ${profit} and profit percentage is ${profitPercentage}% 🤩`);
+        showOutput(`The profit is ${profit} and profit percentage is ${profitPercentage.toFixed(2)}% 💰🤩`);
+        outputBox.style.color = 'green';
 
     } else if (initial > current) {
         //loss logic
         var loss = (initial - current) * quantity;
         var lossPercentage = (loss / initial) * 100;
-        console.log(`The loss is ${loss} and the loss percentage is ${lossPercentage}% 😌`);
+        showOutput(`The loss is ${loss} and the loss percentage is ${lossPercentage.toFixed(2)}% 😌`);
+        outputBox.style.color = 'red';
 
     } else {
-        console.log("No pain, No gain.. and No gain so No pain !😃")
+        showOutput("No pain, No gain..& No gain so No pain");
+        outputBox.style.color = 'black';
     }
 }
 
-submitButton.addEventListener("click", calculateProfitAndLoss);
+showOutput = (message) => {
+    outputBox.innerHTML = message;
+}
