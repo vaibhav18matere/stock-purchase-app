@@ -1,10 +1,68 @@
-*{
-    background-color: bisque;
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
 body{
+    font-family: 'Roboto', sans-serif;
+    margin:0;
     text-align: center;
+    font-family: 'Roboto', sans-serif;
+    background: rgb(213,166,208);
+    background: radial-gradient(circle, rgba(213,166,208,1) 0%, rgba(96,162,201,1) 100%);
 }
-label{
+.container{
+    height: 60vh;
+    width: 40%;
+    margin: 15vh auto;
+    box-shadow: 2px 2px 8px 13px #424b6c;
+}
+.container h1{
+    padding-top: 15px;
+}
+.section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.section input{
+    margin: 1rem;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 5px 8px;
+    color: black;
+}
+.section button{
     display: block;
-    padding-bottom: 1rem;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    background: rgba(96,162,201,1);   
+    color: #FFFFFF;
+    border-radius: 0.8rem;
+    border: none;
+    border-width: medium;
+    cursor: pointer;
+    font-size: large;
+}
+.section button:hover{
+    background-color:rgb(7, 68, 103);
+}
+#output-box{
+    margin: 5px;
+    font-size: 1.2rem;
+    border-bottom: 3px solid grey;
+    padding: 5px 20px;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+/* to remove arrows from input section */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

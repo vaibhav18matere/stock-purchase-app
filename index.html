@@ -5,28 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Stock purchase app</title>
+    <title>Stock Purchase App</title>
 </head>
 <body>
     
-<main>
+<div class="container">
+    <h1>Stock Purchase App</h1>
+    <p>Enter the details to know your total returns on investment</p>
 
-    <label for="initial-price">Initial Price : 
-        <input type="number" id="initial-price" placeholder="Enter initial price of stock">
-    </label>
+    <div class="section">
+        <label for="initial-price">Initial Price : 
+            <input type="number" id="initial-price" placeholder="Enter initial price of stock">
+        </label>
+    
+        <label for="stock-quantity">Quantity : 
+            <input type="number" id="stock-quantity" placeholder="Enter no. of stocks purchased">
+        </label>
+    
+        <label for="current-price">Current Price : 
+            <input type="number" id="current-price" placeholder="Enter current market price of stock">
+        </label>
+    
+        <button id="submit-btn">Tell me !!</button>
+    
+        <div id="output-box"></div>
+    </div>
 
-    <label for="stock-quantity">Quantity : 
-        <input type="number" id="stock-quantity" placeholder="Enter no. of stocks purchased">
-    </label>
-
-    <label for="current-price">Current Price : 
-        <input type="number" id="current-price" placeholder="Enter current market price of stock">
-    </label>
-
-    <button id="submit-btn">Tell me !!</button>
-
-    <div id="output-box"></div>
-</main>
+</div>
 
 
 
