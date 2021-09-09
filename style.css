@@ -35,7 +35,7 @@ body{
     display: block;
     margin: 1.5rem;
     padding: 0.5rem;
-    background: rgba(96,162,201,1);   
+    background-color:rgb(7, 68, 103);  
     color: #FFFFFF;
     border-radius: 0.8rem;
     border: none;
@@ -44,7 +44,13 @@ body{
     font-size: large;
 }
 .section button:hover{
-    background-color:rgb(7, 68, 103);
+    background-color: rgba(96,162,201,1); 
+}
+/* to remove arrows from input section */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 #output-box{
     margin: 5px;
@@ -54,15 +60,3 @@ body{
     border-radius: 5px;
 }
 
-
-
-
-
-
-
-/* to remove arrows from input section */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
