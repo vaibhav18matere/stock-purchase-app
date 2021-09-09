@@ -47,11 +47,11 @@ body{
     background-color: rgba(96,162,201,1); 
 }
 /* to remove arrows from input section */
-input::-webkit-outer-spin-button,
+/* input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
-}
+} */
 #output-box{
     margin: 5px;
     font-size: 1.2rem;
