@@ -30,7 +30,7 @@ calculateProfitAndLoss = (initial, quantity, current) => {
         outputBox.style.backgroundColor = 'red';
 
     } else {
-        showOutput("You are on 'break-even'point!!! Means, No profit & no loss yet! ");
+        showOutput("You are on 'break-even' point! Means, No profit & no loss yet! ");
         outputBox.style.backgroundColor = 'white';
     }
 }
