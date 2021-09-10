@@ -15,7 +15,12 @@ submitHandler = () => {
 submitButton.addEventListener("click", submitHandler);
 
 calculateProfitAndLoss = (initial, quantity, current) => {
-    if (initial < current) {
+
+    if (initial <= 0 || quantity <= 0 || current <= 0) {
+        return outputBox.innerText = "Please enter valid inputs";
+    }
+
+    else if (initial < current) {
         //profit logic
         var profit = (current - initial);
         var profitPercentage = (profit / initial) * 100;
@@ -30,7 +35,7 @@ calculateProfitAndLoss = (initial, quantity, current) => {
         outputBox.style.backgroundColor = 'red';
 
     } else {
-        showOutput("You are on 'break-even' point! Means, No profit & no loss yet! ");
+        showOutput("You are on 'break-even' point! Means, No profit or no loss yet! ");
         outputBox.style.backgroundColor = 'white';
     }
 }
