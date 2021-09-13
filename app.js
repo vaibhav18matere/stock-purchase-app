@@ -22,15 +22,16 @@ calculateProfitAndLoss = (initial, quantity, current) => {
 
     else if (initial < current) {
         //profit logic
-        var profit = (current - initial);
-        var profitPercentage = (profit / initial) * 100;
+
+        var profit = (current - initial) * quantity;
+        var profitPercentage = (profit / (initial * quantity)) * 100;
         showOutput(`The profit is ${profit} and profit percentage is ${profitPercentage.toFixed(2)}% 💰🤩`);
         outputBox.style.backgroundColor = 'green';
 
     } else if (initial > current) {
         //loss logic
-        var loss = (initial - current);
-        var lossPercentage = (loss / initial) * 100;
+        var loss = (initial - current) * quantity;
+        var lossPercentage = (loss / (initial * quantity)) * 100;
         showOutput(`The loss is ${loss} and the loss percentage is ${lossPercentage.toFixed(2)}% 😌`);
         outputBox.style.backgroundColor = 'red';
 
