@@ -46,13 +46,14 @@ body{
 .section button:hover{
     background-color: rgba(96,162,201,1); 
 }
-.loading-img {
+#loading-img {
     border: 16px solid #f3f3f3;
     border-radius: 50%;
     border-top: 16px solid rgb(7, 68, 103);
     width: 40px;
     height: 40px;
     animation: spin 2s linear infinite;
+    display: none;
   }
   
   @keyframes spin {
