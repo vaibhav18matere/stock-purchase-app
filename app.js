@@ -3,6 +3,7 @@ const stocksQuantity = document.querySelector("#stock-quantity");
 const currentPrice = document.querySelector("#current-price");
 const submitButton = document.querySelector("#submit-btn");
 const outputBox = document.querySelector("#output-box");
+const loadingImg = document.querySelector("#loading-img");
 
 submitHandler = () => {
     var iPrice = Number(initialPrice.value);
@@ -12,8 +13,6 @@ submitHandler = () => {
     calculateProfitAndLoss(iPrice, qty, cPrice);
 }
 
-submitButton.addEventListener("click", submitHandler);
-
 calculateProfitAndLoss = (initial, quantity, current) => {
 
     if (initial <= 0 || quantity <= 0 || current <= 0) {
@@ -22,7 +21,6 @@ calculateProfitAndLoss = (initial, quantity, current) => {
 
     else if (initial < current) {
         //profit logic
-
         var profit = (current - initial) * quantity;
         var profitPercentage = (profit / (initial * quantity)) * 100;
         showOutput(`The profit is ${profit} and profit percentage is ${profitPercentage.toFixed(2)}% 💰🤩`);
@@ -44,3 +42,5 @@ calculateProfitAndLoss = (initial, quantity, current) => {
 showOutput = (message) => {
     outputBox.innerHTML = message;
 }
+
+submitButton.addEventListener("click", submitHandler);
