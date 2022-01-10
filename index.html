@@ -5,20 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Stock Purchase App</title>
+    <title>Stock Returns Calculator</title>
 </head>
 <body>
     
 <div class="container">
-    <h1>Stock Purchase App</h1>
-    <p>Enter the details to know your total returns on investment</p>
+    <h1>Stock Return Calculator</h1>
+    <p>Enter the details to know your total return on investment</p>
 
     <div class="section">
         <label for="initial-price">Initial Price : 
             <input type="number" min="1" id="initial-price" placeholder="enter initial price">
         </label>
     
-        <label for="stock-quantity">Quantity : 
+        <label for="stock-quantity">Total Quantity : 
             <input type="number" min="1" id="stock-quantity" placeholder="enter no. of stocks">
         </label>
     
@@ -27,13 +27,11 @@
         </label>
     
         <button id="submit-btn">Tell me !!</button>
+        
         <div id="loading-img"></div>
         <div id="output-box"></div>
     </div>
-
 </div>
-
-
 
     <script src="./app.js"></script>
 </body>

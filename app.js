@@ -5,14 +5,13 @@ const submitButton = document.querySelector("#submit-btn");
 const outputBox = document.querySelector("#output-box");
 const loadingImg = document.querySelector("#loading-img");
 
-submitHandler = () => {
-    var iPrice = Number(initialPrice.value);
-    var qty = Number(stocksQuantity.value);
-    var cPrice = Number(currentPrice.value);
+const submitHandler = () => {
+    let iPrice = Number(initialPrice.value);
+    let qty = Number(stocksQuantity.value);
+    let cPrice = Number(currentPrice.value);
 
     calculateProfitAndLoss(iPrice, qty, cPrice);
 }
-
 
 calculateProfitAndLoss = (initial, quantity, current) => {
     loadingImg.style.display = "block";
@@ -22,7 +21,6 @@ calculateProfitAndLoss = (initial, quantity, current) => {
         if (initial <= 0 || quantity <= 0 || current <= 0) {
             return outputBox.innerText = "Please enter valid inputs";
         }
-
         else if (initial < current) {
             //profit logic
             var profit = (current - initial) * quantity;
@@ -42,7 +40,6 @@ calculateProfitAndLoss = (initial, quantity, current) => {
             outputBox.style.backgroundColor = 'white';
         }
     }, 2000);
-
 }
 
 showOutput = (message) => {
